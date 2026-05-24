@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://dapur-mama-backend.vercel.app/',
-  headers: { 'Content-Type': 'application/json' },
+    baseURL: 'https://dapur-mama-backend.vercel.app/api',
+    headers: { 'Content-Type': 'application/json' },
 })
 
 api.interceptors.request.use((config) => {
