@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "DapurMama",
+    "slug": "dapur-mama-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E8390E"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
