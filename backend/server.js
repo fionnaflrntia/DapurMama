@@ -14,8 +14,7 @@ connectDB()
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'http://localhost:8081',
-    'http://192.168.1.12:8081'
+    'https://dapur-mama-web.vercel.app',
   ],
   credentials: true,
 }))
@@ -34,16 +33,11 @@ app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Endpoint tidak ditemukan.' })
 })
 
-app.use((err, req, res, next) => {
-  console.error("Error occured");
-  console.error(err.stack);
-  res.status(500).json({ 
-    success: false, 
-    message: err.message || 'Terjadi kesalahan pada server.' 
-  });
-});
+module.exports = app
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => {
-  console.log(`Server berjalan di http://localhost:${PORT}`)
-})
+if (require.main === module) {
+  const PORT = process.env.PORT || 5000
+  app.listen(PORT, () => {
+    console.log(`Server berjalan di http://localhost:${PORT}`)
+  })
+}
