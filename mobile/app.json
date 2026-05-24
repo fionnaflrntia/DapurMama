@@ -8,10 +8,16 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E8390E"
-      }
+      },
+      "package": "com.fifionna.dapurmamamobile"
     },
     "web": {
       "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c7ed51a9-78c7-4385-85ad-fa3ff11c7cea"
+      }
     }
   }
 }
