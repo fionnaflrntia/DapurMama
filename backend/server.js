@@ -14,7 +14,6 @@ connectDB()
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://dapur-mama-web.vercel.app',
     'https://dapur-mama-web-amber.vercel.app/'
   ],
   credentials: true,
